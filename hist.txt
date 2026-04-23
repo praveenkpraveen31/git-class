@@ -1,0 +1,62 @@
+    1  ls -la
+    2  cd .ssh/
+    3  ls
+    4  cat id_rsa
+    5  ls
+    6  ls
+    7  mkdir demo-offline
+    8  cd demo-offline/
+    9  ls -la
+   10  git config list
+   11  git config --global user.name "praveenkpraveen31"
+   12  git config --global user.email "praveenkpraveen31@gmail.com"
+   13  git config list
+   14  git config --global init.defaultBranch main
+   15  git config --list
+   16  cd ..
+   17  mkdir my-first-project
+   18  ls
+   19  ls
+   20  cd my-first-project/
+   21  ls
+   22  ls -la 
+   23  ls
+   24  vim demofile.txt 
+   25  cat demofile.txt 
+   26  ls -la
+   27  git init
+   28  ls
+   29  ls -la
+   30  cd .git/
+   31  ls
+   32  cd ..
+   33  git status 
+   34  echo "this is my second file" > ite.txt
+   35  ls
+   36  git status 
+   37  git add demofile.txt 
+   38  git status 
+   39  git commit -m "Initial commit: add demofile.txt" 
+   40  git remote origin
+   41  git remote origin -v show 
+   42  git remote origin show 
+   43  git status 
+   44  git log --oneline
+   45* git statu
+   46  git log 
+   47  git branch -a
+   48  git remote add origin git@github.com:praveenkpraveen31/git-class.git
+   49  git push -u origin main
+   50  git log
+   51  git status 
+   52  git add . 
+   53  git status 
+   54  git log
+   55  git commit -m "this is my ite file" ite.txt
+   56  git status 
+   57  git log
+   58  git log
+   59  git push . 
+   60  git push origin main 
+   61  history 
+   62  history > hist.txt
