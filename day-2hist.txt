@@ -1,0 +1,132 @@
+    1  ls -la
+    2  cd .ssh/
+    3  ls
+    4  cat id_rsa
+    5  ls
+    6  ls
+    7  cd three-trees-demo/
+    8  ls
+    9  git init
+   10  ls
+   11  ls -la
+   12  echo "version 1" > file_a.txt
+   13  echo "version 1" > file_b.txt
+   14  echo "version 1" > file_c.txt
+   15  ls
+   16  git stattus
+   17  git status
+   18  git add file_a.txt 
+   19  git status 
+   20  git commit -m "Add file_a only"
+   21  git status 
+   22  git log
+   23  echo "version 2" > file_a.txt
+   24  git status 
+   25  git add file_a.txt 
+   26  git status 
+   27  git restore --staged file_a.txt
+   28  cat file_a.txt 
+   29  git status 
+   30  echo "login feature" > login.py
+   31  echo "payment feature (WIP)" > payment.py
+   32  echo "old bug fix" > bugfix.py
+   33  git add bugfix.py login.py 
+   34  git status 
+   35  git commit -m "feat: add login and fix old bug"
+   36  git logs
+   37  git log
+   38  echo "Feature A" > feature_a.txt && git add . && git commit -m "feat: add feature A"
+   39  echo "Feature B" > feature_b.txt && git add . && git commit -m "feat: add feature B"
+   40  echo "Bug fix"   > bugfix.txt    && git add . && git commit -m "fix: resolve null pointer bug"
+   41  git status 
+   42  git log
+   43  git log --oneline
+   44  git log --oneline --graph
+   45  git log --author="praveen" --oneline
+   46  git log --author="yash" --oneline
+   47  git log --since="2024-01-01" --until="2026-04-25" --oneline
+   48  git log --grep="bug" --oneline
+   49  git log --oneline --stat
+   50  git log --oneline
+   51  git show e52d4f2
+   52  git show 6c8d10f
+   53  ls
+   54  git log --oneline
+   55  git show 3770689
+   56  git deff
+   57  git diff
+   58  echo "version 3" > file_a.txt 
+   59  git status 
+   60  git diff
+   61  echo "version 4" >> file_a.txt 
+   62  echo "this is my version 5 demo file" >> file_a.txt 
+   63  git diff
+   64  git diff
+   65  git diff file_b.txt
+   66  git diff --staged
+   67  git add file_a.txt 
+   68  git status 
+   69  git diff --staged
+   70  git commit -m "Add new line" file_a.txt 
+   71  git diff HEAD~1 HEAD
+   72  git diff HEAD~2 HEAD
+   73  git diff HEAD~1 HEAD
+   74  git diff HEAD~2 HEAD
+   75  git diff HEAD~5 HEAD
+   76  cd
+   77  cd Desktop/
+   78  cd git\ class/
+   79  ls
+   80  ls -la
+   81  mkdir gitignor
+   82  cd gitignor/
+   83  ls
+   84  echo "tons of packages" > node_modules/some_package.js
+   85  echo "SECRET_KEY=abc123" > .env
+   86  echo "export default function App() {}" > App.js
+   87  git init
+   88  git status
+   89  ls
+   90  ls -la
+   91  at > .gitignore << 'EOF'
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER commit this)
+.env
+.env.local
+.env.production
+
+   92  vi .gitignore
+   93  git status 
+   94  git add .gitignore App.js
+   95  git status 
+   96  git commit -m "chore: add gitignore and App.js"
+   97  git commit -m "chore: add gitignore and App.js"
+   98  git push .
+   99  git push . main 
+  100  git push App.js main 
+  101  git origin
+  102  git origin show
+  103  git remote add origin git@github.com:praveenkpraveen31/git-class.git
+  104  git push -u origin main 
+  105  git config list
+  106  cd ..
+  107  cd my-first-project/
+  108  ls
+  109  echo "SECRET_KEY=abc123" > .env
+  110  echo "export default function App() {}" > App.js
+  111  vi .gitignore
+  112  git status 
+  113  git add .gitignore App.js
+  114  git commit -m "chore: add gitignore and App.js"
+  115  git push -u origin main
+  116  history 
+  117  history > day.txt
+  118  history > day-2\.txt
+  119  git status 
+  120  ls
+  121  rm -rm day.txt 
+  122  rm -rf day.txt 
+  123  rm -rf day-2.txt 
+  124  history > day-2hist.txt
