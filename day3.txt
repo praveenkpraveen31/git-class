@@ -1,0 +1,100 @@
+    1  ls -la
+    2  cd .ssh/
+    3  ls
+    4  cat id_rsa
+    5  ls
+    6  cd Desktop/
+    7  cd git\ class/
+    8  cd my-first-project/
+    9  git
+   10  git branch
+   11  git merge bugFix
+   12  git merge --abort 
+   13  exit
+   14  ls
+   15  ls
+   16  ls
+   17  cd my-first-project/
+   18  ls
+   19  git branch 
+   20  git branch -r
+   21  git branch -r 
+   22  cd ..
+   23  ls
+   24  mkdir merge-demo
+   25  cd merge-demo/
+   26  git init
+   27  ls
+   28  echo "Line 1" > app.txt && git add . && git commit -m "Initial: Line 1"
+   29  git branch --all
+   30  git status 
+   31  git log
+   32  git switch -c feature/add-lines
+   33  git branch 
+   34  echo "Line 2" >> app.txt && git add . && git commit -m "feat: add line 2"
+   35  git log --oneline 
+   36  echo "Line 3" >> app.txt && git add . && git commit -m "feat: add line 3"
+   37  git switch main
+   38  git merge feature/add-lines
+   39  git config show
+   40  git config list 
+   41  git log --graph 
+   42  cd ..
+   43  mkdir three-way-demo && cd three-way-demo
+   44  git init
+   45  echo "Base content" > app.txt && git add . && git commit -m "Base commit"
+   46  git switch -c feature/new-section
+   47  git branch 
+   48  echo "New section content" >> app.txt && git add . && git commit -m "feat: new section"
+   49  git switch main
+   50  echo "Main branch update" >> notes.txt && git add . && git commit -m "docs: add notes"
+   51  git log --graph 
+   52  git merge feature/new-section
+   53  ls -la 
+   54  git log --graph 
+   55  git log --graph 
+   56  cd ..
+   57  cd my-first-project/
+   58  git switch -c bugfix
+   59  echo "hello ite git studets" > ite.txt 
+   60  git add ite.txt 
+   61  git commit -m "file content changes"
+   62  git switch main 
+   63  git branch -r 
+   64  git branch 
+   65  git merge bugfix
+   66  git push origin bugfix
+   67  cd 
+   68  cd Desktop/git\ class/
+   69  mkdir conflict-demo && cd conflict-demo
+   70  git init
+   71  vi website.html
+   72  ls
+   73  git status 
+   74  git add website.html 
+   75  git commit -m "Initial website"
+   76  git switch -c dev-a/update-contact
+   77  ls
+   78  vi website.html 
+   79  git add website.html 
+   80  git commit -m "fix: update contact to support email"
+   81  git switch main
+   82  git switch -c dev-b/update-contact
+   83  vi website.html 
+   84  git add website.html 
+   85  git commit -m "fix: update contact to hello email"
+   86  git switch main
+   87  git merge dev-a/update-contact
+   88  git merge dev-b/update-contact
+   89  git status 
+   90  cat website.html 
+   91  vi website.html 
+   92  git add website.html 
+   93  git commit -m "merge: resolve contact email conflict — keep both addresses"
+   94  git log --oneline --graph
+   95  cd .
+   96  cd ..
+   97  cd my-first-project/
+   98  git branch -f
+   99  git branch -r
+  100  history > day3.txt
