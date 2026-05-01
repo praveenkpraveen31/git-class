@@ -1,0 +1,196 @@
+    1  ls -la
+    2  cd .ssh/
+    3  ls
+    4  cat id_rsa
+    5  ls
+    6  cd Desktop/
+    7  cd git\ class/
+    8  cd my-first-project/
+    9  git
+   10  git branch
+   11  git merge bugFix
+   12  git merge --abort 
+   13  exit
+   14  ls
+   15  ls
+   16  ls
+   17  cd my-first-project/
+   18  ls
+   19  git branch 
+   20  git branch -r
+   21  git branch -r 
+   22  cd ..
+   23  ls
+   24  mkdir merge-demo
+   25  cd merge-demo/
+   26  git init
+   27  ls
+   28  echo "Line 1" > app.txt && git add . && git commit -m "Initial: Line 1"
+   29  git branch --all
+   30  git status 
+   31  git log
+   32  git switch -c feature/add-lines
+   33  git branch 
+   34  echo "Line 2" >> app.txt && git add . && git commit -m "feat: add line 2"
+   35  git log --oneline 
+   36  echo "Line 3" >> app.txt && git add . && git commit -m "feat: add line 3"
+   37  git switch main
+   38  git merge feature/add-lines
+   39  git config show
+   40  git config list 
+   41  git log --graph 
+   42  cd ..
+   43  mkdir three-way-demo && cd three-way-demo
+   44  git init
+   45  echo "Base content" > app.txt && git add . && git commit -m "Base commit"
+   46  git switch -c feature/new-section
+   47  git branch 
+   48  echo "New section content" >> app.txt && git add . && git commit -m "feat: new section"
+   49  git switch main
+   50  echo "Main branch update" >> notes.txt && git add . && git commit -m "docs: add notes"
+   51  git log --graph 
+   52  git merge feature/new-section
+   53  ls -la 
+   54  git log --graph 
+   55  git log --graph 
+   56  cd ..
+   57  cd my-first-project/
+   58  git switch -c bugfix
+   59  echo "hello ite git studets" > ite.txt 
+   60  git add ite.txt 
+   61  git commit -m "file content changes"
+   62  git switch main 
+   63  git branch -r 
+   64  git branch 
+   65  git merge bugfix
+   66  git push origin bugfix
+   67  cd 
+   68  cd Desktop/git\ class/
+   69  mkdir conflict-demo && cd conflict-demo
+   70  git init
+   71  vi website.html
+   72  ls
+   73  git status 
+   74  git add website.html 
+   75  git commit -m "Initial website"
+   76  git switch -c dev-a/update-contact
+   77  ls
+   78  vi website.html 
+   79  git add website.html 
+   80  git commit -m "fix: update contact to support email"
+   81  git switch main
+   82  git switch -c dev-b/update-contact
+   83  vi website.html 
+   84  git add website.html 
+   85  git commit -m "fix: update contact to hello email"
+   86  git switch main
+   87  git merge dev-a/update-contact
+   88  git merge dev-b/update-contact
+   89  git status 
+   90  cat website.html 
+   91  vi website.html 
+   92  git add website.html 
+   93  git commit -m "merge: resolve contact email conflict — keep both addresses"
+   94  git log --oneline --graph
+   95  cd .
+   96  cd ..
+   97  cd my-first-project/
+   98  git branch -f
+   99  git branch -r
+  100  history > day3.txt
+  101  git add day3.txt 
+  102  git commit -m "day-3"
+  103  git push origin main 
+  104  exit
+  105  cd rebase-demo/
+  106  ls
+  107  git switch main 
+  108  cd ..
+  109  rm -rf rebase-demo/
+  110  ls
+  111  mkdir rebase-demo && cd rebase-demo
+  112  echo "Base" > app.txt && git add . && git commit -m "C0: Base"
+  113  git init
+  114  echo "Base" > app.txt && git add . && git commit -m "C0: Base"
+  115  echo "Shared" >> app.txt && git add . && git commit -m "C1: Shared work"
+  116  echo "Main feature A" >> app.txt && git add . && git commit -m "C2: Main feature A"
+  117  git switch -c bugFix HEAD~1
+  118  echo "Bug fix" >> app.txt && git add . && git commit -m "C3: Critical bug fix"
+  119  git switch bugFix         # Make sure bugFix is checked out
+  120  git rebase main
+  121  cd ..
+  122  rm -rf rebase-demo/
+  123  [200~
+  124  mkdir rebase-demo && cd rebase-demo
+  125  echo "Base" > app.txt
+  126  git init
+  127  git add .
+  128  git commit -m "hello"
+  129  echo "shared" >> app.txt 
+  130  git add .
+  131  git commit -m "shared"
+  132  git switch -c bugFix HEAD~1
+  133  echo "Bug fix" > bug.txt
+  134  git add .
+  135  git commit -m "C3: Critical bug fix"
+  136  git log --oneline --all --graph
+  137  git rebase main
+  138  git log --oneline --all --graph
+  139  cat bug.txt 
+  140  cat app.txt 
+  141  git log --oneline --graph
+  142  cd ..
+  143  rm -rf rebase-demo/
+  144  mkdir demo 
+  145  cd demo/
+  146  git init
+  147  echo "hello this is my first file" > file.txt
+  148  git commit -am "c0"
+  149  git add .
+  150  git commit -m "c0"
+  151  git log --oneline 
+  152  echo "this is my file 2" >> file.txt 
+  153  git commit -am "c1"
+  154  echo "new file" >> file.txt 
+  155  git commit -am "c2"
+  156  git log --oneline 
+  157  git switch -c bugfix HEAD~1
+  158  git log 
+  159  git log --oneline 
+  160  echo "bugfile" >bugfile.txt
+  161  git commit -am 
+  162  git commit -am "c3"
+  163  git add .
+  164  git commit -am "c3"
+  165  git log --oneline --graph --decorate --all
+  166  git rebase main 
+  167  git log --oneline --graph --decorate --all
+  168  git checkout main n
+  169  git checkout main 
+  170  echo "class" >> file.txt 
+  171  git commit -am "c4"
+  172  git switch bugfix 
+  173  echo "bugfix branch" > file.txt 
+  174  git checkout main 
+  175  echo "class" >> file.txt 
+  176  git log --oneline 
+  177  git status 
+  178  cat file.txt 
+  179  git commit -am "C5"
+  180  cat file.txt 
+  181  git rebase main 
+  182  git rebase main 
+  183  git rebase main --continue 
+  184  git rebase main 
+  185  ls .git/rebase-merge/
+  186  rm -rf  .git/rebase-merge/
+  187  git rebase main 
+  188  git log --oneline 
+  189  git switch bugfix 
+  190  git switch -c backup-bugfix
+  191  git log --oneline 
+  192  git branch -vv
+  193  history 
+  194  cd ..
+  195  cd my-first-project/
+  196  history > rebase.txt
