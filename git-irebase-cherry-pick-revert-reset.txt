@@ -1,0 +1,75 @@
+139  mkdir interactive-rebase-demo && cd interactive-rebase-demo
+  140  git init
+  141  echo "Base" > app.py && git add . && git commit -m "Initial"
+  142  git status 
+  143  git log --oneline 
+  144  git switch -c feature/user-profile
+  145  echo "def get_user(): pass" >> app.py && git add . && git commit -m "WIP"
+  146  echo "def update_user(): pass" >> app.py && git add . && git commit -m "wip still working"
+  147  echo "def delete_user(): pass" >> app.py && git add . && git commit -m "done i think"
+  148  echo "# User profile module" > app.py && git add . && git commit -m "oops fix"
+  149  echo "typo fix" >> app.py && git add . && git commit -m "typo"
+  150  git log --oneline 
+  151  git switch main 
+  152  git rebase -i HEAD~5
+  153  git switch feature/user-profile 
+  154  git rebase -i HEAD~5
+  155  git log --oneline 
+  156  git config list
+  157  cd 
+  158  cd Desktop/
+  159  cd git\ class/
+  160  ls
+  161  mkdir cherry-demo && cd cherry-demo
+  162  git init
+  163  echo "Production code" > main.py && git add . && git commit -m "Base production code"
+  164  cat main.py 
+  165  git switch -c feature/big-feature
+  166  git status 
+  167  echo "Feature part 1" >> main.py && git add . && git commit -m "feat: part 1 (not ready)"
+  168  echo "def fix_critical_bug(): pass" >> main.py && git add . && git commit -m "fix: critical null pointer crash"
+  169  echo "Feature part 3" >> main.py && git add . && git commit -m "feat: part 3 (not ready)"
+  170  git log --oneline
+  171  git switch main 
+  172  git cherry-pick aaa8778
+  173  git status 
+  174  git add main.py 
+  175* git cherry-pick 
+  176  git cherry-pick --continue
+  177  cd ..
+  178  mkdir revert-demo && cd revert-demo
+  179  git init
+  180  echo "Good feature" > app.py && git add . && git commit -m "feat: good feature"
+  181  echo "Bug introduced" >> app.py && git add . && git commit -m "feat: new feature (has bug)"
+  182  echo "Another feature" >> app.py && git add . && git commit -m "feat: another feature"
+  183  git log --oneline 
+  184  git log --oneline 
+  185  git revert 23297a2
+  186  git add . 
+  187  git revert --continue 
+  188  git revert --continue 
+  189  git revert --continue 
+  190  git add . 
+  191  git revert --continue 
+  192  git log --oneline 
+  193  cd ..
+  194  mkdir reset-demo && cd reset-demo
+  195  git init
+  196  echo "Commit 1" > f.txt && git add . && git commit -m "Commit 1"
+  197  echo "Commit 2" >> f.txt && git add . && git commit -m "Commit 2"
+  198  echo "Commit 3" >> f.txt && git add . && git commit -m "Commit 3"
+  199  git log --oneline 
+  200  git reset --soft HEAD~1
+  201  git log --oneline 
+  202  git status 
+  203  git reset HEAD~1
+  204  git status 
+  205  git log --oneline 
+  206  echo "WIP 1" >> f.txt && git add . && git commit -m "WIP 1"
+  207  echo "WIP 2" >> f.txt && git add . && git commit -m "WIP 2"
+  208  echo "WIP 3" >> f.txt && git add . && git commit -m "WIP 3"
+  209  git log --oneline 
+  210  git reset --hard HEAD~3
+  211  git status 
+  212  git log --oneline 
+  213  history 
