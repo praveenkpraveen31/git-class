@@ -1,0 +1,226 @@
+    1  ls -la
+    2  cd .ssh/
+    3  ls
+    4  cat id_rsa
+    5  ls
+    6  cd Desktop/
+    7  cd git\ class/
+    8  cd my-first-project/
+    9  git
+   10  git branch
+   11  git merge bugFix
+   12  git merge --abort 
+   13  exit
+   14  ls
+   15  ls
+   16  ls
+   17  cd my-first-project/
+   18  ls
+   19  git branch 
+   20  git branch -r
+   21  git branch -r 
+   22  cd ..
+   23  ls
+   24  mkdir merge-demo
+   25  cd merge-demo/
+   26  git init
+   27  ls
+   28  echo "Line 1" > app.txt && git add . && git commit -m "Initial: Line 1"
+   29  git branch --all
+   30  git status 
+   31  git log
+   32  git switch -c feature/add-lines
+   33  git branch 
+   34  echo "Line 2" >> app.txt && git add . && git commit -m "feat: add line 2"
+   35  git log --oneline 
+   36  echo "Line 3" >> app.txt && git add . && git commit -m "feat: add line 3"
+   37  git switch main
+   38  git merge feature/add-lines
+   39  git config show
+   40  git config list 
+   41  git log --graph 
+   42  cd ..
+   43  mkdir three-way-demo && cd three-way-demo
+   44  git init
+   45  echo "Base content" > app.txt && git add . && git commit -m "Base commit"
+   46  git switch -c feature/new-section
+   47  git branch 
+   48  echo "New section content" >> app.txt && git add . && git commit -m "feat: new section"
+   49  git switch main
+   50  echo "Main branch update" >> notes.txt && git add . && git commit -m "docs: add notes"
+   51  git log --graph 
+   52  git merge feature/new-section
+   53  ls -la 
+   54  git log --graph 
+   55  git log --graph 
+   56  cd ..
+   57  cd my-first-project/
+   58  git switch -c bugfix
+   59  echo "hello ite git studets" > ite.txt 
+   60  git add ite.txt 
+   61  git commit -m "file content changes"
+   62  git switch main 
+   63  git branch -r 
+   64  git branch 
+   65  git merge bugfix
+   66  git push origin bugfix
+   67  cd 
+   68  cd Desktop/git\ class/
+   69  mkdir conflict-demo && cd conflict-demo
+   70  git init
+   71  vi website.html
+   72  ls
+   73  git status 
+   74  git add website.html 
+   75  git commit -m "Initial website"
+   76  git switch -c dev-a/update-contact
+   77  ls
+   78  vi website.html 
+   79  git add website.html 
+   80  git commit -m "fix: update contact to support email"
+   81  git switch main
+   82  git switch -c dev-b/update-contact
+   83  vi website.html 
+   84  git add website.html 
+   85  git commit -m "fix: update contact to hello email"
+   86  git switch main
+   87  git merge dev-a/update-contact
+   88  git merge dev-b/update-contact
+   89  git status 
+   90  cat website.html 
+   91  vi website.html 
+   92  git add website.html 
+   93  git commit -m "merge: resolve contact email conflict — keep both addresses"
+   94  git log --oneline --graph
+   95  cd .
+   96  cd ..
+   97  cd my-first-project/
+   98  git branch -f
+   99  git branch -r
+  100  history > day3.txt
+  101  git add day3.txt 
+  102  git commit -m "day-3"
+  103  git push origin main 
+  104  exit
+  105  pwd
+  106  cd Desktop/
+  107  mkdir pran-sid-project
+  108  cd pran-sid-project/
+  109  mkdir stash-demo && cd stash-demo
+  110  git init
+  111  echo "Production code" > app.py && git add . && git commit -m "Base"
+  112  echo "def new_feature(): # TODO" >> app.py
+  113  echo "half_done = True" > feature_wip.py
+  114  cat app.py 
+  115  cat app.py 
+  116  git stash push -m "WIP: new feature half done"
+  117  git stash push --include-untracked -m "WIP: new feature"
+  118  git status 
+  119  git switch -c hotfix/prod-crash
+  120  echo "# BUGFIX: null check added" >> app.py
+  121  cat app.py 
+  122  git add .
+  123  git commit -m "fix: add null check to prevent prod crash"
+  124  git switch main
+  125  git merge hotfix/prod-crash
+  126  git stash list
+  127  git stash pop
+  128  git stash apply stash@{0}
+  129  git status
+  130  git merge hotfix/prod-crash
+  131  git stash list
+  132  cd ..
+  133  mkdir stash-demo && cd stash-demo
+  134  git init
+  135  echo "Production code" > app.py && git add . && git commit -m "Base"
+  136  git log --oneline 
+  137  cat app.py 
+  138  echo "def new_feature(): # TODO" >> app.py
+  139  echo "half_done = True" > feature_wip.py
+  140  git status 
+  141  git stash push -m "WIP: new feature half done"
+  142  git stash list
+  143  git stash push --include-untracked -m "WIP: new feature"
+  144  git stash list
+  145  git status 
+  146  git switch -c hotfix/prod-crash
+  147  echo "# BUGFIX: null check added" >> app.py
+  148  git add app.py
+  149  git commit -m "fix: add null check to prevent prod crash"
+  150  git switch main
+  151  git merge hotfix/prod-crash
+  152  cat app.py 
+  153  git stash list
+  154  git stash pop
+  155  git status 
+  156  git log --oneline 
+  157  git status 
+  158  cd ..
+  159  mkdir reflog-demo && cd reflog-demo
+  160  git init
+  161  echo "A" > f.txt && git add . && git commit -m "Commit A"
+  162  echo "B" >> f.txt && git add . && git commit -m "Commit B"
+  163  echo "C" >> f.txt && git add . && git commit -m "Commit C"
+  164  echo "D" >> f.txt && git add . && git commit -m "Commit D"
+  165  git log --oneline 
+  166  git log --oneline 
+  167  git reset --hard HEAD~3
+  168  git log --oneline 
+  169  git reflog
+  170  cat f.txt 
+  171  git reset --hard a5f2852
+  172  git log --oneline 
+  173  git switch -c important-feature
+  174  echo "crucial work" > crucial.py
+  175  git add . && git commit -m "Important work"
+  176  git log --oneline 
+  177  git switch main
+  178  git branch -D important-feature 
+  179  git reflog
+  180  git branch 
+  181  git branch important-feature 1b39114
+  182  git branch 
+  183  git switch important-feature 
+  184  git log --oneline 
+  185  cd ..
+  186  mkdir internals-demo && cd internals-demo
+  187  git init
+  188  echo "Hello, Git!" > hello.txt
+  189  ls -la 
+  190  git status 
+  191  cd .git/
+  192  ls
+  193  cd objects/
+  194  ls
+  195  tree.com 
+  196  ls info/
+  197  ls pack/
+  198  git add hello.txt
+  199  cd ..
+  200  cd 
+  201  cd Desktop/git\ class/
+  202  cd internals-demo/
+  203  git add hello.txt
+  204  git status 
+  205  ls .git/objects/
+  206  ls .git/objects/67/
+  207  ls -l .git/objects/67/
+  208  ls -l .git/objects/67/
+  209  git hash-object hello.txt
+  210  git commit -m "hello file"
+  211  git hash-object hello.txt
+  212  ls .git/objects/8b/be4dbf27211513ca81541b0f73fd6074b33c7c 
+  213  ls .git/objects/d3/ec8a0f5950fb1f73ce0d1ed55cd6fa7afcdeb9 
+  214  ls .git/objects/67/
+  215  git cat-file -p HEAD
+  216  git cat-file -p HEAD^{tree}
+  217  git cat-file -p 670a245535fe6316eb2316c1103b1a88bb519334
+  218  cat .git/refs/heads/main
+  219  cat .git/refs/heads/main 
+  220  git switch -c new-branch
+  221  cat .git/refs/heads/
+  222  ls .git/refs/heads/
+  223  cat .git/refs/heads/new-branch 
+  224  cd ..
+  225  cd my-first-project/
+  226  history > git-stash-reflog.txt
