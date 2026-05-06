@@ -1,0 +1,118 @@
+39  mkdir my-project
+  140  cd my-project/
+  141  ls
+  142  git init
+  143  echo 'console.log("Hello World")' > app.js
+  144  ls
+  145  git add . 
+  146  git commit -m "feat: initial project setup"
+  147  git log --oneline 
+  148  git remote -v
+  149  git remote add origin https://github.com/praveenkpraveen31/my-project.git
+  150  git remote -v
+  151  git push -u origin main
+  152  git fetch https://github.com/praveenkpraveen31/my-project.git
+  153  git push -u origin main
+  154  git fetch origin
+  155  git log --oneline main..origin/main
+  156  git diff main origin/main
+  157  git pull origin main
+  158  ls
+  159  ls -la 
+  160  git push -u origin main 
+  161  rm -f .* 
+  162  rm -rf .* 
+  163  ls
+  164  git clone git@github.com:praveenkpraveen31/my-project.git
+  165  ls
+  166  cp -r my-project/.* .
+  167  ls
+  168  ls my-project/
+  169  cp -r my-project/*.* .
+  170  ls
+  171  ls my-project/
+  172  mv my-project/LICENSE . 
+  173  ls
+  174  rm -rf my-project/
+  175  ls
+  176  git remote -v
+  177  git log --oneline 
+  178  git push -u origin main 
+  179  ls
+  180  git status 
+  181  git add . 
+  182  git commit -m "this is my first commit"
+  183  ls
+  184  git push -u origin main 
+  185  echo 'console.log("Updated!")' >> app.js
+  186  git add app.js
+  187  git commit -m "feat: update message"
+  188  git push origin main 
+  189  git switch -c feature/login
+  190  git branch 
+  191  echo 'login code' > login.js
+  192  git add login.js
+  193  git commit -m "feat: add login"
+  194  git push -u origin feature/login
+  195  cd ..
+  196  mkdir download-repo
+  197  cd download-repo/
+  198  cd ..
+  199  cd my-project/
+  200  git fetch 
+  201  ls
+  202  git fetch origin 
+  203  ls
+  204  git switch main
+  205  git fetch origin 
+  206  git log --oneline main..origin/main
+  207  git diff main origin/main
+  208  git status 
+  209  git branch 
+  210  git switch feature/login 
+  211  git log 
+  212  git fetch origin 
+  213  git log --oneline main..origin/main
+  214  git log --oneline feature/login..origin/feature/login 
+  215  history 
+  216  git switch main 
+  217  git merge feature/login 
+  218  git log --oneline 
+  219  git push origin main 
+  220  git fetch origin 
+  221  git log --oneline main..origin/main
+  222  git diff main origin/main
+  223  git pull origin main
+  224  git switch feature/login 
+  225  echo "this is newfile" >> new.js
+  226  git add .  
+  227  git commit -m "new js file"
+  228  git push origin 
+  229  git fetch origin 
+  230  git diff main origin/main
+  231  git diff feature/login  origin/main
+  232  git pull origin main
+  233  git switch main 
+  234  git pull origin feature/login 
+  235  ls
+  236  git log --oneline | head -3
+  237  git diff main origin/main
+  238  git show origin/main
+  239  git merge feature/login 
+  240  git merge main 
+  241  git branch -vv
+  242  git switch -c feature/newfeature
+  243  echo 'feature code' > feature.js
+  244  git add feature.js
+  245  git commit -m "feat: add new feature"
+  246  git push -u origin feature/newfeature
+  247  git branch -vv
+  248  git branch -u origin/feature/newfeature
+  249  git status
+  250  git pull 
+  251  git log --oneline 
+  252  git switch main 
+  253  git pull 
+  254  git merge feature/newfeature 
+  255  git push origin main
+  256  git log --oneline
